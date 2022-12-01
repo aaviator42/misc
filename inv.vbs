@@ -1,8 +1,8 @@
-;run programs or scripts invisibly
-;by aaviator42
-;
-;usage:
-;   inv <command> <args>
+'run programs or scripts invisibly
+'by aaviator42
+'
+'usage:
+'   inv <command> <args>
 
 if wscript.arguments.count = 0 then
     WScript.Quit
