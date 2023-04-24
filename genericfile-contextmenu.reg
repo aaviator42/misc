@@ -1,7 +1,6 @@
-;https://superuser.com/questions/221719/add-a-blank-file-to-the-windows-new-context-menu
-
-
 Windows Registry Editor Version 5.00
+
+;https://superuser.com/questions/221719/add-a-blank-file-to-the-windows-new-context-menu
 
 [HKEY_CLASSES_ROOT\.generic]
 @="genericfile"
