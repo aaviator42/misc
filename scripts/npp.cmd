@@ -1,3 +1,8 @@
+:: notepad++ launcher
+:: invoke as 'npp' or as 'npp filename'
+:: by aaviator42
+:: 2022-08-15
+
 @echo off
 set filep=%cd%\%1
 set filep=%filep:"=%
