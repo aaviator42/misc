@@ -6,4 +6,7 @@ License: AGPLv3 except where noted otherwise.
 -----
 
 
- * `loadtest.cmd`: Batch file I use to quickly test PHP files that work with SQLite to ensure blocking is working correctly and there's no data corruption taking place. 
+ * `scripts/`: Small scripts for use on Windows
+ * `ahk/`: AutoHotKey scripts for use on Windows
+ * `reg/`: Registry keys for tweaks on Windows
+
