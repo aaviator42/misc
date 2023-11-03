@@ -1,0 +1,6 @@
+; Disable ThinkPad magnifier fn+tab shortcut
+; 2023-11-03
+Windows Registry Editor Version 5.00
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Lenovo\ShortcutKey\AppLaunch\Ex_13\UIAccess]
+"File"="%SystemRoot%\\system32\\magnify.exe.disabled"
