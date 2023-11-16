@@ -37,9 +37,9 @@ If (dx**2 > 0 and dx**2>dy**2) ;edit 0 for sensitivity (changes sensitivity to m
 			Click WheelLeft
    	}
 }
-If (dy**2 > 0 and dy**2>dx**2) ;edit 0 for sensitivity (changes sensitivity to movement)
+If (dy**2 > 5 and dy**2>dx**2) ;edit 0 for sensitivity (changes sensitivity to movement)
 {
-	times := Abs(dy)/1 ;edit 1 for sensitivity (changes frequency of scroll signal)
+	times := Abs(dy)/5 ;edit 5 for sensitivity (changes frequency of scroll signal)
 	Loop, %times% 
 	{
 		If (dy > 0)
