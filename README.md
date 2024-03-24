@@ -10,5 +10,5 @@ License: AGPLv3 except where noted otherwise.
  * `ahk/`: AutoHotKey scripts for use on Windows
  * `reg/`: Registry keys for tweaks on Windows
  * `fragments/`: Code fragments for use in larger projects
- 
+ * `etc/`: Other stuff `¯\_(ツ)_/¯`
 
