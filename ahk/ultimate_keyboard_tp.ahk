@@ -1,6 +1,6 @@
 ﻿/*
 Aavi's ultimate AHK Keyboard Script
-v5.1, 2023-11-16, for ThinkPad with Windows 11
+v5.2, 2024-05-18, for ThinkPad with Windows 11
 Uses AHK v1
 
 
@@ -19,6 +19,7 @@ CapsLock + `		= 	Clipboard type for websites that block paste
 CapsLock + S		= 	Type ¯\_(ツ)_/¯
 CapsLock + E		=	PowerToys text extract
 CapsLock + C		=	PowerToys color picker
+CapsLock + W		= 	Alt + F4
 
 
 Notes:
@@ -65,6 +66,10 @@ return
 
 CapsLock & `::
 	SendRaw %clipboard%
+return
+
+CapsLock & W::
+	Send !{F4}
 return
 
 ; -- POWERTOYS
