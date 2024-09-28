@@ -27,10 +27,12 @@ set count=%1
 set url=%2
 
 for /l %%i in (1, 1, %count%) do (
+	echo:
     echo Request %%i:
 	REM the following suppresses page output
     REM curl -s -o nul -w "HTTP Response Code: %%{http_code}\n" %url%
     curl -s -w "HTTP Response Code: %%{http_code}\n" %url%
+	timeout /t 10
 )
 
 endlocal
