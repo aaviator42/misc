@@ -1,8 +1,8 @@
 @echo off
 
-:: a2server.cmd 
+:: a2server.cmd
 :: aaviator42
-:: v0.1 - 2024-11-06
+:: v0.2 - 2025-03-23
 
 title Apache Server
 
@@ -35,6 +35,7 @@ copy "%APACHE_HOME%\conf\httpd.conf" %TMP_CONF% > nul
     echo Listen %PORT%
     echo ServerName localhost:%PORT%
     echo DocumentRoot "%WEB_ROOT%"
+    echo ErrorLog "%WEB_ROOT%\errors_httpd.log"
     echo ^<Directory "%WEB_ROOT%"^>
     echo    Options Indexes FollowSymLinks
     echo    AllowOverride All
@@ -42,8 +43,13 @@ copy "%APACHE_HOME%\conf\httpd.conf" %TMP_CONF% > nul
     echo ^</Directory^>
 ) >> %TMP_CONF%
 
+:: Add PHP error logging override (assumes php.ini is loaded by Apache, but forces location via Apache directive)
+(
+    echo php_admin_flag log_errors On
+    echo php_admin_value error_log "%WEB_ROOT%\errors_php.log"
+) >> %TMP_CONF%
+
 :: Start Apache with the temporary configuration file
 "%APACHE_HOME%\bin\httpd.exe" -f %TMP_CONF% -e info
-REM "%APACHE_HOME%\bin\httpd.exe" -f %TMP_CONF% -e debug
 
 pause
